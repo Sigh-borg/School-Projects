@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* Importing an example font
+@font-face {
+    font-family: "Booter - Zero Zero"
+    src: url("fonts/Booter - Zero Zero.woff") format("woff")
+         url("fonts/Booter - Zero Zero.woff2") format("woff2")
+    font-weight: normal
+    font-style: normal
+*/
+
+/* (*) is the everything-selector.
+    This will apply general styles to all elements in the html */
+* {
+    box-sizing: border-box; /*Makes it so that the size of the elements are determined by padding, margins, and actual size of the content*/
+                            /*For example, the width attribute will account both the width of the image and the padding */
+    font-family: 'Raleway';
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav ul {
+    /*All of the normal <ul> will have margins but all the <ul> inside a nav class will not have a margin*/
+    margin: 0;
+
+}
+
+.nav li {
+    display: inline; /*Makes the <li> elements display in line instead of bullet points*/
+}
+
+.nav a {
+    display: inline-block; /*Similar to inline except it allows you to do certain things like add padding and height to elments
+                            that inline elements do not allow you to do */
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav { /*Applies only to the main-nav elements*/
+    text-align: center;
+    font-size: 1.1em; /*Makes font 10% bigger*/
+    font-weight: lighter; /*Lighter makes it blend a little into the background*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) 
+}
+
+.sub-nav {
+    padding: 0.5em;
+    color: black;
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: dark;
+    
+}
+
+
+.main-nav li {
+    padding: 0 5%; /*Adds 0 padding to top and bottom, 5% padding to left and right*/
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255,0.3); /* When the <a> is hovered over, the background around it will change color*/
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url("images/Header\ Background.jpg");
+    background-blend-mode: multiply; /*Blends the two backgrounds together*/
+    background-size: cover; /*Tells background to expand as much as it can*/
+    padding-bottom: 30px; /*Creates gap at the bottom of header*/
+}
+
+.name {
+    text-align: center;
+    margin: 0;
+    font-size: 3em;
+    font-family: Raleway;
+    font-weight: normal;
+    color: white;
+}
+
+.name-large {
+    font-size: 8 em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 1400px; /*If element tries to get bigger than 900px, it will stay at 900px*/
+    margin: 0 auto; /*auto tells it that the margins on the left and right will be as large they need to be
+                      and will be exactly the same so the text remains in the center*/
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-family: 'Courier';
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    font-size: 2.5em;
+}
+
+.profile-image {
+    float: left; /*Image will remove itself from the flow and float completely to the left side */
+    height: 225px;
+    width: 150px;
+    margin: 15px;
+    border-radius: 50%; /*Tells us how far we want to curve the edges of our border. In this case, 50% makes a perfect circle.*/
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: 0.25em 0;
+}
+
+.main-footer-container { /*Main purpose is to wrap our elements in a flex display, which is a complex layout element in CSS.*/
+    display: flex;  /*Creates a flex box*/
+    align-items: center; /* Centers everything inside the flex box*/
+}
+
+.main-footer-container ul {
+    flex-grow: 1; /* Tell it to grow to take up as much space as possible.*/
+    text-align: end; /*Align text to the right side*/
+}
+
+.footer-nav li {
+    padding: 0 0.5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.pdf {
+    text-align: center;
+    margin: 15px;
+}
